@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+
+    <ImageView
+        android:id="@+id/poopy"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="288dp"
+        android:background="#00FF0000"
+        android:contentDescription="Poopy"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/sym_def_app_icon"
+        tools:src="@android:drawable/btn_star_big_on"
+        tools:srcCompat="@tools:sample/avatars"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/indication"
+        android:layout_width="405dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="261dp"
+        android:text="Indication"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poopy"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <!-- Option A (Left of FAB) -->
+
+    <!-- Option B (Left of FAB) -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="336dp"
+        android:layout_marginTop="181dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="16dp"
+        android:alpha="010"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/indication"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <LinearLayout
+        android:id="@+id/addTimeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#77000000"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/fab"
+        app:layout_constraintEnd_toStartOf="@+id/fab"
+        android:gravity="center_horizontal"
+        app:srcCompat="@android:drawable/ic_input_add">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addNewTimeOption"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:insetTop="1dp"
+            android:insetBottom="1dp"
+            android:text="New time"
+            android:textColor="@android:color/white"
+            app:backgroundTintMode="src_in"
+            app:cornerRadius="5dp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="#FFFFFF" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/AddMissingTimeOption"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:insetTop="1dp"
+            android:insetBottom="1dp"
+            android:text="Missing time"
+            android:textColor="@android:color/white"
+            app:backgroundTintMode="src_in"
+            app:cornerRadius="5dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
